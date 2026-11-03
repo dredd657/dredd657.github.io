@@ -108,6 +108,44 @@ footer{border-top:1px solid var(--line); margin-top:60px; padding:28px 0 40px; c
 .foot-in p{margin:0}
 .links{display:flex; gap:18px; flex-wrap:wrap}
 
+/* ---------- product page ---------- */
+.prod-head{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,520px); gap:44px;
+  align-items:center; padding-top:64px; padding-bottom:24px}
+.prod-head h1{margin:0 0 8px; font-size:clamp(2.2rem,5.4vw,3.5rem); line-height:1.03;
+  letter-spacing:-1.2px}
+.prod-shot{margin:0}
+.prod-shot img{display:block; width:100%; height:auto; border:1px solid var(--line);
+  border-radius:var(--r); background:#0d1116}
+
+.steps{margin:0; padding-left:22px}
+.steps li{margin-bottom:10px; color:#b9c4d0}
+.code{background:#0d1116; border:1px solid var(--line); border-radius:12px; padding:16px 18px;
+  margin:0; overflow:auto; color:#a9b6c4; font:13px/1.75 Consolas,"Cascadia Mono",monospace}
+
+.spec-table{width:100%; border-collapse:collapse; margin:0 0 8px}
+.spec-table th,.spec-table td{border-bottom:1px solid var(--line); padding:12px 0; text-align:left;
+  vertical-align:top; font-size:.95rem}
+.spec-table th{color:var(--muted); font-weight:600; width:34%; padding-right:24px}
+.spec-table td{color:#cfd8e2}
+
+.faq details{border-bottom:1px solid var(--line); padding:16px 0}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer; font-weight:600; list-style:none; display:flex;
+  justify-content:space-between; gap:16px; align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; color:var(--accent); font-weight:700; font-size:1.1rem}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:12px 0 0; color:#b9c4d0}
+
+.changelog .release{border-left:2px solid var(--line); padding-left:20px}
+.rel-head{margin:0 0 8px}
+.changelog ul{margin:0; padding-left:20px; color:#b9c4d0}
+.changelog li{margin-bottom:6px}
+
+.buy-final{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--r); padding:24px 28px;
+  margin-top:12px}
+
 @media (max-width:760px){
   .nav nav a:not(.btn){display:none}
   .hero{padding-top:56px}
@@ -116,4 +154,7 @@ footer{border-top:1px solid var(--line); margin-top:60px; padding:28px 0 40px; c
   .card-media{border-right:0; border-bottom:1px solid var(--line)}
   .card-media img{height:auto}
   .card-body{padding:22px}
+  .prod-head{grid-template-columns:minmax(0,1fr); padding-top:40px; gap:28px}
+  .spec-table th{width:40%}
+  .buy-final{padding:20px}
 }

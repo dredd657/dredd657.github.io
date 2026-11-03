@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curve2D Editor — visual Bezier editing for Godot 4 | Dredds Assets</title>
+<meta name="description" content="Drag bezier points and tangent handles inside the Godot 4 Inspector. Real editor undo, editor-only, no runtime code, no dependencies. Godot 4.3+.">
+<meta name="theme-color" content="#0a0c0f">
+<link rel="canonical" href="https://dredd657.github.io/curve2d-editor.html">
+<meta property="og:type" content="product">
+<meta property="og:title" content="Curve2D Editor — visual Bezier editing for Godot 4">
+<meta property="og:description" content="Drag bezier points and tangent handles right in the Inspector. Real undo, no runtime code, no dependencies.">
+<meta property="og:image" content="assets/og-1200x630.png">
+<meta property="og:url" content="https://dredd657.github.io/curve2d-editor.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/avatar-1024.png">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Curve2D Editor",
+  "description": "Visual Bezier editing for Godot 4. Drag points and tangent handles inside the Inspector with real editor undo. Editor-only, no runtime code.",
+  "brand": { "@type": "Brand", "name": "Dredds Assets" },
+  "category": "Game Development Tools",
+  "operatingSystem": "Windows, macOS, Linux",
+  "softwareRequirements": "Godot 4.3+",
+  "offers": {
+    "@type": "Offer",
+    "price": "6.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://dredd657.itch.io/curve2d-editor"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="Dredds Assets home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M5 24C15 24 15 8 27 8" fill="none" stroke="#57b0ff" stroke-width="3.4" stroke-linecap="round"/><circle cx="5" cy="24" r="3" fill="#e9eef4"/><circle cx="27" cy="8" r="3" fill="#f5883f"/></svg>
+      </span>
+      <span class="brand-t">Dredds<span class="dim">&nbsp;Assets</span></span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="./">Home</a>
+      <a href="./#assets">Assets</a>
+      <a href="#faq">FAQ</a>
+      <a href="#license">License</a>
+      <a class="btn btn-sm" href="https://dredd657.itch.io/curve2d-editor" rel="noopener">Buy $6.99</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="wrap prod-head">
+    <div>
+      <p class="kicker">Godot 4.3+ · editor addon · v1.0.0</p>
+      <h1>Curve2D Editor</h1>
+      <p class="lede">Godot draws a <code>Curve2D</code> but only lets you edit it through two numbers per
+        point. This addon gives you the curve itself: drag the points and tangent handles inside the
+        editor, with every gesture as one step in Godot's own undo history.</p>
+      <div class="cta">
+        <a class="btn" href="https://dredd657.itch.io/curve2d-editor" rel="noopener">Buy on itch.io — $6.99</a>
+        <a class="btn btn-ghost" href="https://github.com/dredd657" rel="noopener">GitHub</a>
+      </div>
+      <p class="muted small" style="margin-top:16px">Single-title commercial license · Instant download ·
+        Same ZIP for Windows, macOS and Linux.</p>
+    </div>
+    <figure class="prod-shot">
+      <img src="assets/cover-curve2d.png" alt="Curve2D Editor running in the Godot 4 Inspector" width="630" height="500">
+    </figure>
+  </section>
+
+  <section class="wrap">
+    <h2>What it does</h2>
+    <div class="grid2">
+      <div>
+        <h3>Visual point editing</h3>
+        <p>Drag points directly; the curve and the 2D viewport update live. No inspector scroll, no
+          dialing numbers until it looks right.</p>
+
+        <h3>Tangent handles with modes</h3>
+        <p>Smooth, Mirror In/Out and Break Tangents. Smoothness is derived from the curve data, so it
+          survives reopening the window, undo/redo and scene reloads — nothing is cached in the editor.</p>
+
+        <h3>Insert and delete points</h3>
+        <p>Double-click empty space to add a point; <kbd>Delete</kbd> or <kbd>Backspace</kbd> removes the
+          selected one.</p>
+      </div>
+      <div>
+        <h3>Real undo, not a custom stack</h3>
+        <p>Each drag and each point edit is one step routed through Godot's
+          <code>EditorUndoRedoManager</code>, so <kbd>Ctrl</kbd>+<kbd>Z</kbd> and the Undo History panel
+          both behave exactly as they do for any built-in tool.</p>
+
+        <h3>Zoom, pan, fit</h3>
+        <p>Wheel zooms about the cursor, middle-drag pans, <kbd>F</kbd> frames the whole curve. Display
+          only — it never touches your point coordinates.</p>
+
+        <h3>Fits your project, not the other way round</h3>
+        <p>Every edit is written straight into the <code>Curve2D</code> resource, so curves behave like
+          hand-authored ones. No side-car files, no lock-in, no cleanup when you remove the addon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap band">
+    <h2>What it doesn't do</h2>
+    <div class="grid2">
+      <div>
+        <ul class="cross">
+          <li><b>No grid snapping.</b> A snap field exists inside the canvas code, but no UI reaches it —
+            it isn't in the feature list and it isn't in the build you get.</li>
+          <li><b>No "Insert" key.</b> Points are added by double-click. If you only read the keyboard
+            shortcut in another listing, that one was wrong.</li>
+          <li><b>No runtime component.</b> Nothing to attach to a node, no autoload, no signals to wire.</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="cross">
+          <li><b>Not Godot 3.</b> It uses 4.x editor APIs and will not load in 3.5.</li>
+          <li><b>Not a mesh or path-following tool.</b> It edits <code>Curve2D</code> resources; it doesn't
+            bake, extrude, or generate geometry.</li>
+        </ul>
+        <p class="muted small">If any of that is what you need, don't buy it. Ask on the Discord and I'll
+          tell you where it stands.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Specs</h2>
+    <table class="spec-table">
+      <tbody>
+        <tr><th>Version</th><td>1.0.0</td></tr>
+        <tr><th>Engine</th><td>Godot 4.3+ (developed and tested on 4.7.2-stable)</td></tr>
+        <tr><th>Language</th><td>GDScript, <code>@tool</code> editor scripts only</td></tr>
+        <tr><th>Download</th><td>One ZIP, 13.7 KB — Windows, macOS and Linux</td></tr>
+        <tr><th>Contents</th><td><code>addons/curve2d_editor/</code> (7 scripts + plugin.cfg) and a README</td></tr>
+        <tr><th>License</th><td>Single-title commercial, one licence per developer</td></tr>
+        <tr><th>Dependencies</th><td>None. No binaries, no third-party libraries, no autoload</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="wrap">
+    <h2>Install</h2>
+    <div class="grid2">
+      <div>
+        <ol class="steps">
+          <li>Unzip and copy <code>addons/curve2d_editor/</code> into your project.</li>
+          <li>Open <b>Project → Project Settings → Plugins</b> and enable <b>Curve2D Editor</b>.</li>
+          <li>Select a node with a <code>Curve2D</code> property (<code>@export var path: Curve2D</code>).</li>
+          <li>A <b>Curve2D Editor</b> row appears in the Inspector — press <b>Edit</b>, or <b>New</b> to
+            create a curve.</li>
+        </ol>
+      </div>
+      <div>
+        <pre class="code">your_project/
+└── addons/
+    └── curve2d_editor/
+        ├── plugin.cfg
+        ├── plugin.gd
+        ├── curve_canvas.gd
+        ├── curve_editor_window.gd
+        ├── curve_inspector.gd
+        ├── curve_edit_ops.gd
+        └── curve_utils.gd</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap band" id="license">
+    <h2>License</h2>
+    <div class="grid2">
+      <div>
+        <h3>You can</h3>
+        <ul class="check">
+          <li>Use it in unlimited personal and commercial Godot projects.</li>
+          <li>Ship games made with it — no royalties, no attribution required.</li>
+          <li>Modify it for your own project.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You can't</h3>
+        <ul class="cross">
+          <li>Redistribute or resell the addon itself, modified or not.</li>
+          <li>Bundle it into another asset pack or template.</li>
+        </ul>
+        <p class="muted small">One licence per developer. Studio seats and site licences on request:
+          <a href="mailto:dreddsassets@gmail.com">dreddsassets@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap faq" id="faq">
+    <h2>FAQ</h2>
+
+    <details open>
+      <summary>Will uninstalling it break my curves?</summary>
+      <p>No. The addon writes into the <code>Curve2D</code> resource itself. Remove the folder, disable
+        the plugin, and your curves are byte-for-byte what they were.</p>
+    </details>
+
+    <details>
+      <summary>Does it add anything at runtime?</summary>
+      <p>No. Every file is a <code>@tool</code> editor script. Nothing is added to your scenes, no
+        autoload is registered, and no project settings are written.</p>
+    </details>
+
+    <details>
+      <summary>Does it work in Godot 3.x?</summary>
+      <p>No. It uses Godot 4 editor APIs (<code>EditorInspectorPlugin</code>,
+        <code>EditorUndoRedoManager</code>) that don't exist in 3.x.</p>
+    </details>
+
+    <details>
+      <summary>Is undo really the editor's undo?</summary>
+      <p>Yes. Each gesture pushes one step through <code>EditorUndoRedoManager</code> for the scene that
+        owns the object, so <kbd>Ctrl</kbd>+<kbd>Z</kbd> and the Undo History panel both work, and undo
+        doesn't wipe unrelated edits.</p>
+    </details>
+
+    <details>
+      <summary>Can I use it commercially?</summary>
+      <p>Yes, on unlimited projects, with no royalties. You just can't redistribute or resell the addon
+        itself.</p>
+    </details>
+
+    <details>
+      <summary>Is there grid snapping?</summary>
+      <p>Not in 1.0.0. A snap field exists in the canvas internals but no UI exposes it, so it's not
+        advertised. When it ships, it'll be in the changelog below first.</p>
+    </details>
+
+    <details>
+      <summary>How do I get support or report a bug?</summary>
+      <p>Email <a href="mailto:dreddsassets@gmail.com">dreddsassets@gmail.com</a> or ask on the Discord,
+        with your Godot version and — if possible — the scene that reproduces it.</p>
+    </details>
+  </section>
+
+  <section class="wrap">
+    <h2>Changelog</h2>
+    <div class="changelog">
+      <div class="release">
+        <p class="rel-head"><b>1.0.0</b> <span class="muted">— first release</span></p>
+        <ul>
+          <li>Visual point editing with live viewport updates.</li>
+          <li>Tangent handles: Smooth, Mirror In/Out, Break Tangents.</li>
+          <li>Double-click to insert a point; <kbd>Delete</kbd>/<kbd>Backspace</kbd> to remove.</li>
+          <li>One undo step per gesture via <code>EditorUndoRedoManager</code>.</li>
+          <li>Wheel zoom about cursor, middle-drag pan, <kbd>F</kbd> to fit.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted small">Disclosure: the GDScript is drafted with a locally hosted open-weights model,
+      then reviewed, tested and corrected by hand. Nothing ships until the test suite and a parse check
+      pass in a clean Godot 4.7 project.</p>
+  </section>
+
+  <section class="wrap">
+    <div class="buy-final">
+      <div>
+        <h2 style="margin-bottom:6px">Curve2D Editor</h2>
+        <p class="muted" style="margin:0">$6.99 · Godot 4.3+ · 13.7 KB · single-title commercial license</p>
+      </div>
+      <a class="btn" href="https://dredd657.itch.io/curve2d-editor" rel="noopener">Buy on itch.io</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <p>&copy; 2026 Dredds Assets · built by Dredd</p>
+    <p class="links">
+      <a href="https://dredd657.itch.io" rel="noopener">itch.io</a>
+      <a href="https://github.com/dredd657" rel="noopener">GitHub</a>
+      <a href="https://www.youtube.com/@dredd657" rel="noopener">YouTube</a>
+      <a href="https://x.com/dredd657" rel="noopener">X</a>
+      <a href="https://discord.gg/REPLACE_WITH_INVITE" rel="noopener">Discord</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
