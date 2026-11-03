@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dredds Assets — editor tools for Godot 4</title>
+<meta name="description" content="Small, sharp Godot 4 editor addons. Visual Curve2D editing, real undo, no runtime code, no dependencies.">
+<meta name="theme-color" content="#0a0c0f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dredds Assets — editor tools for Godot 4">
+<meta property="og:description" content="Small, sharp Godot 4 editor addons that fix one workflow gap properly.">
+<meta property="og:image" content="assets/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Dredds Assets home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="26" height="26"><path d="M4 24c4 0 4-16 8-16s4 16 8 16" fill="none" stroke="#57b0ff" stroke-width="2.6" stroke-linecap="round"/><circle cx="4" cy="24" r="1.9" fill="#e9eef4"/><circle cx="12" cy="8" r="1.9" fill="#f5883f"/><rect x="24" y="6" width="3.4" height="20" rx="1" fill="#f5883f"/></svg>
+      </span>
+      <span class="brand-t">Dredds<span class="dim">&nbsp;Assets</span></span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#assets">Assets</a>
+      <a href="#why">Why</a>
+      <a href="#license">License</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-sm" href="https://dredd657.itch.io/curve2d-editor" rel="noopener">Get Curve2D&nbsp;Editor</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <p class="kicker">Godot 4 · editor addons</p>
+    <h1>Dredds Assets</h1>
+    <p class="lede">Small, sharp editor tools that close a gap Godot left open. Install in a minute,
+      remove without a trace — every addon is editor-only and writes nothing into your runtime.</p>
+    <div class="cta">
+      <a class="btn" href="#assets">Browse assets</a>
+      <a class="btn btn-ghost" href="https://discord.gg/REPLACE_WITH_INVITE" rel="noopener">Join the Discord</a>
+    </div>
+    <ul class="proof">
+      <li>Godot 4.3+</li>
+      <li>No runtime dependencies</li>
+      <li>Real editor undo</li>
+      <li>Under 2&nbsp;MB</li>
+    </ul>
+  </section>
+
+  <section id="assets" class="wrap">
+    <h2>Assets</h2>
+
+    <article class="card">
+      <a class="card-media" href="https://dredd657.itch.io/curve2d-editor" rel="noopener">
+        <img src="assets/cover-curve2d.png" alt="Curve2D Editor — bezier editing inside the Godot 4 Inspector" width="630" height="500" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Curve2D Editor</h3>
+          <span class="price">$6.99</span>
+        </div>
+        <p class="card-sub">Visual bezier editing for Godot 4 · v1.0.0</p>
+        <p>Godot draws a <code>Curve2D</code> but only lets you edit it through two numbers per point in
+          the Inspector. This addon gives you the curve itself: drag points and tangent handles, add or
+          delete points, with every gesture as one clean step in the editor's undo history.</p>
+        <ul class="tags">
+          <li>godot</li><li>godot-4</li><li>plugin</li><li>curve</li><li>bezier</li><li>tool</li><li>2d</li>
+        </ul>
+        <div class="card-cta">
+          <a class="btn" href="https://dredd657.itch.io/curve2d-editor" rel="noopener">Buy on itch.io</a>
+          <a class="link-arrow" href="#features">Features</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-soon" id="roadmap">
+      <div class="card-media soon-media" aria-hidden="true">
+        <span>In development</span>
+      </div>
+      <div class="card-body">
+        <div class="card-head">
+          <h3>Camera System Editor</h3>
+          <span class="price muted">Not for sale yet</span>
+        </div>
+        <p class="card-sub">Camera bounds, follow smoothing, shake — Godot 4.3+</p>
+        <p>A visual layer over <code>Camera2D</code>: drag the camera rectangle in the viewport, tune
+          follow smoothing and zoom limits, save presets. Being built now; it goes on sale only when the
+          controls actually do something.</p>
+        <div class="card-cta">
+          <a class="link-arrow" href="https://discord.gg/REPLACE_WITH_INVITE" rel="noopener">Hear when it ships</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="why" class="wrap band">
+    <h2>Why these addons are small</h2>
+    <div class="grid3">
+      <div>
+        <h3>Editor-only</h3>
+        <p>No autoloads, no project settings, no nodes injected into your scenes. Disable the plugin and
+          your project is byte-for-byte what it was.</p>
+      </div>
+      <div>
+        <h3>No lock-in</h3>
+        <p>Every edit is written into the resource Godot already uses. Curves behave like hand-authored
+          ones; there is no side-car file to migrate and nothing to clean up.</p>
+      </div>
+      <div>
+        <h3>Small on purpose</h3>
+        <p>GDScript, no binaries, no third-party libraries. A pack you can read through in ten minutes
+          and still understand in a year.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="wrap">
+    <h2>What Curve2D Editor does</h2>
+    <ul class="feature-list">
+      <li><b>Drag points</b> — the curve and the 2D viewport update live.</li>
+      <li><b>Tangent handles</b> — Smooth, Mirror In/Out and Break Tangents; smoothness is derived from the
+        curve data, so it survives reopening, undo and scene reloads.</li>
+      <li><b>Add and remove points</b> — double-click empty space to insert, <kbd>Delete</kbd> or
+        <kbd>Backspace</kbd> to remove the selected one.</li>
+      <li><b>Real undo</b> — one step per gesture, routed through the editor's own undo manager, so
+        <kbd>Ctrl</kbd>+<kbd>Z</kbd> and the Undo History panel both work.</li>
+      <li><b>Zoom, pan, fit</b> — wheel zooms about the cursor, middle-drag pans, <kbd>F</kbd> frames the
+        curve. Display only; your point coordinates never change.</li>
+    </ul>
+    <p class="muted small">Requires Godot 4.3+ (developed and tested on 4.7.2-stable). Editor-side GDScript
+      only — one download works on Windows, macOS and Linux.</p>
+  </section>
+
+  <section id="license" class="wrap band">
+    <h2>License, plainly</h2>
+    <div class="grid2">
+      <div>
+        <h3>You can</h3>
+        <ul class="check">
+          <li>Use it in unlimited personal and commercial Godot projects.</li>
+          <li>Ship games made with it, with no royalties and no attribution required.</li>
+          <li>Modify it for your own project.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You can't</h3>
+        <ul class="cross">
+          <li>Redistribute or resell the addon itself, modified or not.</li>
+          <li>Publish it as part of another asset pack or template.</li>
+        </ul>
+        <p class="muted small">One licence per developer. Studio seats and site licences on request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap">
+    <h2>Contact</h2>
+    <p>Bugs, feature requests and store questions go to
+      <a href="mailto:dreddsassets@gmail.com">dreddsassets@gmail.com</a> or the Discord. Include your Godot
+      version and, if you can, the scene that reproduces it — you get a real reply, not a form letter.</p>
+    <p class="muted small">Disclosure: addon GDScript is drafted with a locally hosted open-weights model and
+      then reviewed, tested and corrected by hand. Nothing ships until the test suite and a parse check pass
+      in a clean Godot 4.7 project.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <p>&copy; 2026 Dredds Assets · built by Dredd</p>
+    <p class="links">
+      <a href="https://dredd657.itch.io" rel="noopener">itch.io</a>
+      <a href="https://github.com/dredd657" rel="noopener">GitHub</a>
+      <a href="https://www.youtube.com/@dredd657" rel="noopener">YouTube</a>
+      <a href="https://x.com/dredd657" rel="noopener">X</a>
+      <a href="https://discord.gg/REPLACE_WITH_INVITE" rel="noopener">Discord</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
